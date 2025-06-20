@@ -57,6 +57,7 @@ const Footer = () => {
           <h2 className="text-yellow-400 text-xl font-bold mb-6 md:mb-0">
             பழக்கவழக்கம்
           </h2>
+          <></>
           <div className="flex flex-col md:flex-row justify-start md:justify-center items-start md:items-center gap-4 md:gap-6 w-full md:w-auto">
             <Link
               to="/"
