@@ -150,18 +150,18 @@ const Footer = () => {
 
           {/* Social media icons */}
           <div className="flex space-x-8 mt-2 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
+            <a href="https://www.facebook.com/Palakkavalakkam/" className="text-gray-400 hover:text-white text-xl">
               <FaFacebookF />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
+            <a href="https://x.com/palakkavalakkam" className="text-gray-400 hover:text-white text-xl">
               <FaTwitter />
             </a>
-            <a href="#" className="text-gray-400 hover:text-white text-xl">
+            {/* <a href="#" className="text-gray-400 hover:text-white text-xl">
               <FaInstagram />
             </a>
             <a href="#" className="text-gray-400 hover:text-white text-xl">
               <FaLinkedinIn />
-            </a>
+            </a> */}
           </div>
         </div>
       </div>
