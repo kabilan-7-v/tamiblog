@@ -100,11 +100,8 @@ const ArticleDetail = () => {
             <span>By {article.author?.name || article.author?.authorName}</span>
             <span className="hidden sm:inline mx-2">|</span>
             <span>
-              {new Date(article.createdAt).toLocaleDateString("en-US", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              })}
+             {article.date}
+             
             </span>
             {article.category && (
               <>

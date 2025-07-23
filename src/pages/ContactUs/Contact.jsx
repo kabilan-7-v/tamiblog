@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { BaseUrl } from "../../api/Api";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -17,20 +18,45 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Here you would typically send the data to your backend
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({
-      name: "",
-      phone: "",
-      phoneCode: "+91",
-      email: "",
-      message: "",
-    });
+    try {
+      const response = await fetch(`${BaseUrl}/api/mail/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: formData.email,
+          to: "kabilanvelmani@example.com", // Change this
+          subject: `New message from ${formData.name}`,
+          message: `Phone: ${formData.phoneCode}
+          Email:${formData.email}
+           ${formData.phone}\n\nMessage:\n${formData.message}`,
+        }),
+      });
+  
+      const data = await response.json();
+  
+      if (response.ok) {
+        alert("Thank you! Your message has been sent.");
+        setFormData({
+          name: "",
+          phone: "",
+          phoneCode: "+91",
+          email: "",
+          message: "",
+        });
+      } else {
+        alert("Something went wrong. Please try again.");
+        console.error(data);
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message. Please check your connection.");
+    }
   };
-
+  
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="mb-8">

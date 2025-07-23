@@ -74,7 +74,7 @@ const HomeBlog = () => {
           <div className="flex flex-col justify-center gap-2 py-4 sm:py-6">
             <div className="text-xs sm:text-sm text-gray-600 mb-1 sm:mb-2">
               By {featuredBlog.author?.authorName} |{" "}
-              {formatDate(featuredBlog.createdAt)}
+              {formatDate(featuredBlog.date)}
             </div>
             <h2 className="text-lg sm:text-xl font-bold mb-2 sm:mb-4">"{featuredBlog.title}"</h2>
             <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4">

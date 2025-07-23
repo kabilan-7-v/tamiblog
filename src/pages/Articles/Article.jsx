@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import { BaseUrl } from "../../api/Api";
@@ -8,7 +8,6 @@ const Article = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -53,7 +52,6 @@ const Article = () => {
       [categoryName]: !prev[categoryName],
     }));
   };
-
   return (
     <div className="w-full px-4 sm:px-6 lg:px-8">
       <div className="w-full">
@@ -129,10 +127,8 @@ const Article = () => {
                         className="text-sm sm:text-base text-gray-700 hover:text-purple-600 cursor-pointer"
                       >
                         <Link
-                          to={`/articles/${article._id}/${encodeURIComponent(
-                            article.title.replace(/\s+/g, "-").toLowerCase()
-                          )}`}
-                          state={{ article: article }}
+                          to={`/articles/${article._id}/${article.link}}`}
+                          state={{ article: article ,_id:article._id }}
                         >
                           {article.title}
                         </Link>

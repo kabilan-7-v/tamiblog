@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../assets/Banner.svg";
+import img from "../assets/image.png";
 
 const Banner = () => {
   return (
@@ -25,7 +25,7 @@ const Banner = () => {
             <button className="px-3 md:px-4 py-2 md:py-3 bg-white border border-l-0 border-gray-300 rounded-r-lg hover:bg-gray-50">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-4 w-4 md:h-5 md:w-5 text-gray-500"
+                className="h-4 w-4 md:h-5 md:w-full text-gray-500"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -48,7 +48,7 @@ const Banner = () => {
             <img
               src={img}
               alt="Person with laptop"
-              className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[450px] md:h-[400px] object-cover"
+              // className="w-[280px] h-[280px] sm:w-[320px] sm:h-[320px] md:w-[450px] md:h-[400px] object-cover"
             />
           </div>
         </div>

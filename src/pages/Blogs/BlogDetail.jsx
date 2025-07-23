@@ -104,11 +104,7 @@ const BlogDetail = (props) => {
             <span>By {blog.author?.authorName}</span>
             <span className="hidden sm:inline mx-2">|</span>
             <span>
-              {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              })}
+              {blog.date}
             </span>
             {blog.category && (
               <>
@@ -141,7 +137,7 @@ const BlogDetail = (props) => {
               >
                 <div className="h-40 sm:h-48 bg-gray-100">
                   {similarBlog.content &&
-                  similarBlog.content.includes("<img") ? (
+                  similarBlog.content.includes("img") ? (
                     <div
                       dangerouslySetInnerHTML={{
                         __html: extractImageTag(similarBlog.content),
@@ -167,7 +163,7 @@ const BlogDetail = (props) => {
                   </p>
 
                   <Link
-                    to={`/blogs/${similarBlog._id}/${encodeURIComponent(similarBlog.title.replace(/\s+/g, '-').toLowerCase())}`}
+                    to={`/blogs/${similarBlog._id}/${similarBlog.link}`}
                     state={{ post: similarBlog }}
                     className="bg-gray-800 text-white px-2 sm:px-3 py-1 text-xs sm:text-sm rounded-md hover:bg-gray-700 transition inline-block"
                   >

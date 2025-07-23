@@ -66,7 +66,7 @@ const Blog = () => {
   if (error)
     return <div className="text-center py-10 text-red-500">{error}</div>;
   if (!latestBlog)
-    return <div className="text-center py-10">No blogs found</div>;
+    return <div className="text-center py-10 h-screen">No blogs found</div>;
 
   return (
     <div className="mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,11 +79,7 @@ const Blog = () => {
             <span>By {latestBlog.author?.authorName}</span>
             <span className="mx-2">|</span>
             <span>
-              {new Date(latestBlog.createdAt).toLocaleDateString("en-US", {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              })}
+              {latestBlog.date}
             </span>
           </div>
 
@@ -92,7 +88,7 @@ const Blog = () => {
           </div>
 
           <Link
-            to={`/blogs/${latestBlog._id}/${encodeURIComponent(latestBlog.title.replace(/\s+/g, '-').toLowerCase())}`}
+            to={`/blogs/${latestBlog._id}/${latestBlog.link}`}
             className="bg-gray-800 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-gray-700 transition inline-block text-sm sm:text-base"
           >
             மேலும் படிக்கவும்
@@ -153,15 +149,13 @@ const Blog = () => {
                   </p>
 
                   <div className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
-                    {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                      year: "numeric",
-                    })}
+                  {
+                    blog.date
+                  }
                   </div>
 
                   <Link
-                    to={`/blogs/${blog._id}/${encodeURIComponent(blog.title.replace(/\s+/g, '-').toLowerCase())}`}
+                    to={`/blogs/${blog._id}/${blog.link}`}
                     state={{ post: blog }}
                     className="bg-gray-800 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-md hover:bg-gray-700 transition self-start text-sm sm:text-base"
                   >

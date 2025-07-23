@@ -39,6 +39,27 @@ const Footer = () => {
       if (!response.ok) {
         throw new Error(data.error || "Failed to subscribe");
       }
+      const response1 = await fetch(`${BaseUrl}/api/mail/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          to: email, // Change this
+          subject: "🎉 Welcome to Our Newsletter!",
+          message: `Hi there,
+
+Thank you for subscribing to our newsletter! 🎊
+
+We're excited to have you with us. You'll now receive updates on our latest news, features, and more.
+
+
+Stay tuned and welcome aboard!
+
+Best regards,
+The Team`,
+        }),
+      });
 
       setMessage("Successfully subscribed!");
       setEmail("");
@@ -150,10 +171,16 @@ const Footer = () => {
 
           {/* Social media icons */}
           <div className="flex space-x-8 mt-2 md:mt-0">
-            <a href="https://www.facebook.com/Palakkavalakkam/" className="text-gray-400 hover:text-white text-xl">
+            <a
+              href="https://www.facebook.com/Palakkavalakkam/"
+              className="text-gray-400 hover:text-white text-xl"
+            >
               <FaFacebookF />
             </a>
-            <a href="https://x.com/palakkavalakkam" className="text-gray-400 hover:text-white text-xl">
+            <a
+              href="https://x.com/palakkavalakkam"
+              className="text-gray-400 hover:text-white text-xl"
+            >
               <FaTwitter />
             </a>
             {/* <a href="#" className="text-gray-400 hover:text-white text-xl">

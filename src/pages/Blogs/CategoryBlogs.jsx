@@ -135,17 +135,11 @@ const CategoryBlogs = () => {
                     </p>
 
                     <div className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
-                      {new Date(blog.createdAt).toLocaleDateString("en-US", {
-                        month: "short",
-                        day: "numeric",
-                        year: "numeric",
-                      })}
+                     {blog.date}
                     </div>
 
                     <Link
-                      to={`/blogs/${blog._id}/${encodeURIComponent(
-                        blog.title.replace(/\s+/g, "-").toLowerCase()
-                      )}`}
+                      to={`/blogs/${blog._id}/${blog.link}}`}
                       state={{ post: blog }}
                       className="bg-gray-800 text-white px-3 sm:px-4 py-1.5 sm:py-2 rounded-md hover:bg-gray-700 transition self-start text-xs sm:text-sm"
                     >
