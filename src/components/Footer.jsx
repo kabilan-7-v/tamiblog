@@ -84,37 +84,37 @@ The Team`,
               to="/"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              Home
+              முகப்பு
             </Link>
             <Link
               to="/blog"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              Blog
+              வலைப்பதிவு
             </Link>
             <Link
               to="/about"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              About us
+              எங்களைப் பற்றி
             </Link>
             <Link
               to="/contact"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              Contact us
+              தொடர்புக்கு
             </Link>
             <Link
               to="/articles"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              Articles
+              கட்டுரைகள்
             </Link>
             <Link
               to="/privacy"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              Privacy Policy
+              தனியுரிமைக் கொள்கை
             </Link>
           </div>
         </div>

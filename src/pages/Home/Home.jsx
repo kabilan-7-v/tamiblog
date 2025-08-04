@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const blogsResponse = await axios.get(`${BaseUrl}/api/blogs`);
+        const blogsResponse = await axios.get(`${BaseUrl}/api/articles`);
         let blogsData = [];
 
         if (blogsResponse.data && Array.isArray(blogsResponse.data.data)) {

@@ -16,7 +16,7 @@ const CategoryBlogs = () => {
       try {
         setLoading(true);
 
-        const blogsResponse = await axios.get(`${BaseUrl}/api/blogs`);
+        const blogsResponse = await axios.get(`${BaseUrl}/api/articles`);
         let allBlogs = [];
 
         if (blogsResponse.data && Array.isArray(blogsResponse.data.data)) {

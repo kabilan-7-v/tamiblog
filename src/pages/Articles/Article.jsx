@@ -8,6 +8,8 @@ const Article = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [expandedCategories, setExpandedCategories] = useState({});
+    console.log("Fetching articles and categories...");
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -17,7 +19,7 @@ const Article = () => {
           `${BaseUrl}/api/public/categories`
         );
 
-        const articlesResponse = await axios.get(`${BaseUrl}/api/articles`);
+        const articlesResponse = await axios.get(`${BaseUrl}/api/blogs`);
 
         const articlesByCategory = {};
         articlesResponse.data.data.forEach((article) => {

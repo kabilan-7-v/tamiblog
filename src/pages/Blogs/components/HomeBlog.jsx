@@ -12,7 +12,7 @@ const HomeBlog = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get(`${BaseUrl}/api/blogs`);
+        const response = await axios.get(`${BaseUrl}/api/articles`);
         let blogsData = [];
 
         if (response.data && Array.isArray(response.data.data)) {
