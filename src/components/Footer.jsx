@@ -90,7 +90,8 @@ The Team`,
               to="/blog"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              வலைப்பதிவு
+              கட்டுரைகள்
+
             </Link>
             <Link
               to="/about"
@@ -108,7 +109,8 @@ The Team`,
               to="/articles"
               className="hover:text-[#FFD700] text-left md:text-center pl-4 md:pl-0"
             >
-              கட்டுரைகள்
+              வலைப்பதிவு
+
             </Link>
             <Link
               to="/privacy"

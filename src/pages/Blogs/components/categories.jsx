@@ -74,11 +74,14 @@ const Categories = ({ availableCategories }) => {
                   )}
                 </div>
                 <div className="space-y-1 sm:space-y-2">
-                  <h4 className="font-medium text-sm sm:text-base">{category.name}</h4>
-                  <p className="text-gray-500 text-xs sm:text-sm">
-                    {category.description}
-                  </p>
-                </div>
+  <h4 className="font-medium text-sm sm:text-base break-words">
+    {category.name}
+  </h4>
+  <p className="text-gray-500 text-xs sm:text-sm break-words">
+    {category.description}
+  </p>
+</div>
+
               </Link>
             ))}
           </div>

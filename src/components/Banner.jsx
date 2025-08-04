@@ -16,7 +16,7 @@ const Banner = () => {
           </p>
 
           {/* Search bar */}
-          <div className="flex w-full max-w-xl mx-auto md:mx-0">
+          {/* <div className="flex w-full max-w-xl mx-auto md:mx-0">
             <input
               type="text"
               placeholder="வலைப்பதிவு தலைப்பு அல்லது முக்கிய சொல்"
@@ -38,7 +38,7 @@ const Banner = () => {
                 />
               </svg>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Right image */}

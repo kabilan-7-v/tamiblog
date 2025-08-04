@@ -68,7 +68,9 @@ const Header = () => {
               location.pathname === "/blog" ? "text-[#FFD700]" : ""
             }`}
           >
-            வலைப்பதிவு
+            கட்டுரைகள்
+
+            
           </Link>
           <Link
             to="/about"
@@ -92,7 +94,7 @@ const Header = () => {
               location.pathname === "/articles" ? "text-[#FFD700]" : ""
             }`}
           >
-            கட்டுரைகள்
+            வலைப்பதிவு
           </Link>
         </div>
       </nav>
@@ -116,7 +118,8 @@ const Header = () => {
             }`}
             onClick={() => setIsMenuOpen(false)}
           >
-            வலைப்பதிவு
+            கட்டுரைகள்
+
           </Link>
           <Link
             to="/about"
@@ -143,7 +146,8 @@ const Header = () => {
             }`}
             onClick={() => setIsMenuOpen(false)}
           >
-            கட்டுரைகள்
+            வலைப்பதிவு
+
           </Link>
         </div>
       )}
